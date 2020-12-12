@@ -1,4 +1,4 @@
-# Scripts
+# HauptSec Scripts
 
 > A collection of my personal or modified scripts.
 >
