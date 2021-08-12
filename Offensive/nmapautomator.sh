@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #by @21y4d
 # modified by Ahaupt3
 
@@ -841,12 +841,12 @@ if ! case "${TYPE}" in [Nn]etwork | [Pp]ort | [Ss]cript | [Ff]ull | UDP | udp | 
         mkdir -p "${OUTPUTDIR}" && cd "${OUTPUTDIR}" || usage
         DIRS=('Exploits' 'Loot' 'Notes' 'Scans' 'Screenshots')
         for DIR in "${DIRS[@]}"; do
-		    if [[ ! -d $DIR ]]; then
-			    mkdir "$DIR"
-		    fi
-	    done
+                        if [[ ! -d $DIR ]]; then
+                                mkdir "$DIR"
+                        fi
+                done
         cd Scans/ && mkdir -p nmap/
-        main | tee "nmapAutomator_${HOST}_${TYPE}.txt"
+        main | tee nmap/"nmapAutomator_${HOST}_${TYPE}.txt"
 else
         printf "${RED}\n"
         printf "${RED}Invalid Type!\n"
